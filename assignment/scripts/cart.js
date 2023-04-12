@@ -2,35 +2,6 @@ console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
 
-let basket = [];
-
-function addItem(item) {
-    basket.push(item);
-    basket.includes(item);
-    console.log(item, 'added to the basket.')
-}
-
-addItem('Chicken');
-console.log(basket);
-addItem('Broccoli');
-addItem('Rice')
-console.log(basket);
-
-function listItems() {
-    for (let i = 0; i < basket.length; i++) {
-        console.log(basket[i])
-    }
-}
-
-console.log('Testing listItems function')
-
-listItems();
-
-
-
-
-
-
 /* ### Required Features
 Update the `cart.js` file to do the following:
 
@@ -46,19 +17,47 @@ Update the `cart.js` file to do the following:
   - console.log each individual item on a new line
 
 - Create a function called `empty`. It should:
-  - reset the `basket` to an empty array
+  - reset the `basket` to an empty array */
 
-//* > __IMPORTANT__
-> Make sure that you are writing code *in the file* to test every function that you write!
 
-For example, to test `addItem`:
-```
-console.log(`Basket is ${basket}`);
-console.log('Adding apples (expect true)', addItem('apples'));
-console.log(`Basket is now ${basket}`);
-```
+let basket = [];
 
-### Stretch Goals 
+function addItem(item) {
+    basket.push(item);
+    basket.includes(item);
+    console.log(item, 'added to the basket.')
+}
+
+addItem('Chicken');
+console.log('Basket is currently:', basket);
+addItem('Broccoli');
+addItem('Rice')
+console.log('Basket is currently:', basket);
+
+function listItems() {
+    for (let i = 0; i < basket.length; i++) {
+        console.log(basket[i])
+    }
+}
+
+console.log('Testing listItems function')
+
+listItems();
+
+function empty() {
+    basket = [];
+}
+
+empty();
+
+console.log('Testing empty function -->', basket)
+
+
+
+
+
+
+/*### Stretch Goals 
 Remember that Stretch Goals are not required, but will help you to further develop concepts from the skills we have covered.
 
 __Using functions in other functions!__
@@ -81,9 +80,8 @@ __Using Array built-in functions!__
   - Use [Array.indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) to find the index of the first matching item in the basket.
   - Use [Array.splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) to remove the first matching item from the basket.
   - Return the item removed or `null` if the item was not found
+ */
 
-## Assignment Submission
-Check in your repo, then turn in your work via the EDA Assignment Portal, as usual and don't hesitate to hit up the Slack channel as needed!
 
-**REMINDER:** Make sure to answer the Slack discussion question for this week! */
+
 
