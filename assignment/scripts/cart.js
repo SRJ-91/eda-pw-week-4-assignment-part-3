@@ -23,9 +23,9 @@ Update the `cart.js` file to do the following:
 let basket = [];
 
 function addItem(item) {
-    basket.push(item);
-    basket.includes(item);
-    console.log(item, 'added to the basket.')
+  basket.push(item);
+  basket.includes(item);
+  console.log(item, 'added to the basket.')
 }
 
 addItem('Chicken');
@@ -35,9 +35,9 @@ addItem('Rice')
 console.log('Basket is currently:', basket);
 
 function listItems() {
-    for (let i = 0; i < basket.length; i++) {
-        console.log(basket[i])
-    }
+  for (let i = 0; i < basket.length; i++) {
+    console.log(basket[i])
+  }
 }
 
 console.log('Testing listItems function')
@@ -45,7 +45,7 @@ console.log('Testing listItems function')
 listItems();
 
 function empty() {
-    basket = [];
+  basket = [];
 }
 
 empty();
@@ -82,6 +82,17 @@ __Using Array built-in functions!__
   - Return the item removed or `null` if the item was not found
  */
 
+const maxItems = 5;
+
+function isFull() {
+  if (basket.length >= maxItems) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(isFull());
 
 
 
