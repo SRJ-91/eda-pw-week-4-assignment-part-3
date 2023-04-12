@@ -4,20 +4,27 @@ console.log('***** Cart Functions *****');
 
 let basket = [];
 
+function addItem(item) {
+    basket.push(item);
+    basket.includes(item);
+    console.log(item, 'added to the basket.')
+}
 
+addItem('Chicken');
+console.log(basket);
+addItem('Broccoli');
+addItem('Rice')
+console.log(basket);
 
+function listItems() {
+    for (let i = 0; i < basket.length; i++) {
+        console.log(basket[i])
+    }
+}
 
+console.log('Testing listItems function')
 
-
-
-
-
-
-
-
-
-
-
+listItems();
 
 
 
