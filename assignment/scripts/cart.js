@@ -21,6 +21,7 @@ Update the `cart.js` file to do the following:
 
 
 let basket = [];
+const maxItems = 5;
 
 function addItem(item) {
   basket.push(item);
@@ -82,8 +83,10 @@ __Using Array built-in functions!__
   - Return the item removed or `null` if the item was not found
  */
 
-const maxItems = 5;
 
+//1 posted at top
+
+//2
 function isFull() {
   if (basket.length >= maxItems) {
     return true
@@ -93,6 +96,24 @@ function isFull() {
 }
 
 console.log(isFull());
+//3
+function addItem2(item) {
+  if (isFull() === true) {
+    console.log('Sorry basket is full!')
+    return false;
+  }
+  basket.push(item);
+  basket.includes(item);
+  console.log(item, 'added to the basket.')
+  return true;
+}
 
-
+console.log('testing addItem2')
+addItem2('Steak');
+addItem2('Potatos');
+addItem2('Protein Powder');
+addItem2('Chicken');
+addItem2('Broccoli');
+addItem2('Rice');
+console.log(basket);
 
